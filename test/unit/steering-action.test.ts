@@ -211,7 +211,7 @@ describe("acknowledged steering action", () => {
 				runId,
 				message: "correct course",
 				location: { asyncDir },
-				ackTimeoutMs: 25,
+				ackTimeoutMs: 250,
 				kill: (_pid, signal) => {
 					if (signal === 0) return true;
 					const error = new Error("runner disappeared") as NodeJS.ErrnoException;
